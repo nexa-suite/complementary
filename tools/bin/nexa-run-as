@@ -1,0 +1,22 @@
+#!/bin/sh
+set -eu
+NEXA_TOOLS_ROOT=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
+. "$NEXA_TOOLS_ROOT/lib/nexa-contributors.sh"
+selected=${1-}; [ -n "$selected" ] || { echo "ERROR: contributor is required" >&2; exit 1; }
+[ "${2-}" = "--" ] || { echo "ERROR: use: nexa-run-as <username> -- <command> [args...]" >&2; exit 1; }
+record=$(nexa_record "$selected") || { echo "ERROR: unknown contributor" >&2; exit 1; }
+IFS='|' read -r github name email private_config public_config <<EOF
+$record
+EOF
+public=$(nexa_expand_home "$public_config"); fingerprint=$(ssh-keygen -lf "$public" | awk 'NR == 1 {print $2}')
+runtime="$NEXA_TOOLS_ROOT/runtime/$github.env"
+[ -f "$runtime" ] || { echo "ERROR: contributor is not armed" >&2; exit 1; }
+socket=$(awk -F= '$1 == "SSH_AUTH_SOCK" {print substr($0,index($0,"=")+1); exit}' "$runtime"); pid=$(awk -F= '$1 == "SSH_AGENT_PID" {print $2; exit}' "$runtime")
+[ -n "$socket" ] && [ -n "$pid" ] && nexa_runtime_agent_owned "$socket" "$pid" || { echo "ERROR: dedicated agent is stale" >&2; exit 1; }
+listing=$(SSH_AUTH_SOCK="$socket" ssh-add -L 2>/dev/null || true); count=$(printf '%s\n' "$listing" | awk 'NF >= 2 {n++} END {print n+0}')
+type=$(awk 'NR == 1 {print $1}' "$public"); blob=$(awk 'NR == 1 {print $2}' "$public")
+line=$(printf '%s\n' "$listing" | awk -v t="$type" -v b="$blob" '$1 == t && $2 == b {print; exit}')
+loaded=$(printf '%s\n' "$line" | ssh-keygen -lf - 2>/dev/null | awk 'NR == 1 {print $2}')
+[ "$count" -eq 1 ] && [ -n "$line" ] && [ "$loaded" = "$fingerprint" ] || { echo "ERROR: dedicated agent identity mismatch" >&2; exit 1; }
+shift 2; [ "$#" -gt 0 ] || { echo "ERROR: command is required" >&2; exit 1; }
+SSH_AUTH_SOCK="$socket" exec "$@"

@@ -1,0 +1,24 @@
+#!/bin/sh
+set -eu
+NEXA_TOOLS_ROOT=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
+. "$NEXA_TOOLS_ROOT/lib/nexa-contributors.sh"
+selected=${1-}; [ -n "$selected" ] || { echo "ERROR: contributor is required" >&2; exit 1; }
+record=$(nexa_record "$selected") || { echo "ERROR: unknown contributor" >&2; exit 1; }
+IFS='|' read -r github name email private_config public_config <<EOF
+$record
+EOF
+public=$(nexa_expand_home "$public_config")
+[ -f "$public" ] || { echo "ERROR: public signing key missing" >&2; exit 1; }
+key_type=$(awk 'NF >= 2 { print $1; exit }' "$public")
+key_blob=$(awk 'NF >= 2 { print $2; exit }' "$public")
+[ "$key_type" = ssh-ed25519 ] && [ -n "$key_blob" ] || { echo "ERROR: invalid public signing key" >&2; exit 1; }
+allowed=$(nexa_allowed_signers_file); mkdir -p "$HOME/.ssh"; chmod 700 "$HOME/.ssh"
+tmp=$(mktemp "$HOME/.ssh/nexa_allowed_signers.tmp.XXXXXX")
+trap 'rm -f "$tmp"' EXIT HUP INT TERM
+if [ -f "$allowed" ]; then
+  awk -v target="$email" 'NF == 0 || /^[[:space:]]*#/ { print; next } { split($1,p,","); for(i in p) if(p[i]==target) next; print }' "$allowed" > "$tmp"
+fi
+printf '%s %s %s\n' "$email" "$key_type" "$key_blob" >> "$tmp"
+chmod 644 "$tmp"; mv "$tmp" "$allowed"; trap - EXIT HUP INT TERM
+printf 'LOCAL SIGNER REGISTERED: %s\nFINGERPRINT: ' "$github"
+ssh-keygen -lf "$public" | awk 'NR == 1 { print $2 }'

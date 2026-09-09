@@ -1,0 +1,22 @@
+#!/bin/sh
+set -u
+NEXA_TOOLS_ROOT=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
+. "$NEXA_TOOLS_ROOT/lib/nexa-contributors.sh"
+printf '%s\n' 'Contributor | Agent alive | Socket reachable | Key count | Expected fingerprint | Actual fingerprint | Exact key match | Result'
+while IFS='|' read -r github _ _ _ public_config; do
+  public=$(nexa_expand_home "$public_config"); expected=$(ssh-keygen -lf "$public" 2>/dev/null | awk 'NR == 1 {print $2}')
+  runtime="$NEXA_TOOLS_ROOT/runtime/$github.env"; alive=NO; reachable=NO; count=0; actual=NONE; match=NO; result=NOT_ARMED
+  if [ -f "$runtime" ]; then
+    socket=$(awk -F= '$1 == "SSH_AUTH_SOCK" {print substr($0,index($0,"=")+1); exit}' "$runtime"); pid=$(awk -F= '$1 == "SSH_AGENT_PID" {print $2; exit}' "$runtime")
+    nexa_runtime_agent_owned "$socket" "$pid" && alive=YES || true
+    listing=$(SSH_AUTH_SOCK="$socket" ssh-add -L 2>/dev/null || true); [ -n "$listing" ] && reachable=YES || true
+    count=$(printf '%s\n' "$listing" | awk 'NF >= 2 {n++} END {print n+0}')
+    type=$(awk 'NR == 1 {print $1}' "$public"); blob=$(awk 'NR == 1 {print $2}' "$public")
+    line=$(printf '%s\n' "$listing" | awk -v t="$type" -v b="$blob" '$1 == t && $2 == b {print; exit}')
+    [ -n "$line" ] && { match=YES; actual=$(printf '%s\n' "$line" | ssh-keygen -lf - 2>/dev/null | awk 'NR == 1 {print $2}'); }
+    [ "$alive" = YES ] && [ "$reachable" = YES ] && [ "$count" -eq 1 ] && [ "$actual" = "$expected" ] && result=READY || true
+  fi
+  printf '%s | %s | %s | %s | %s | %s | %s | %s\n' "$github" "$alive" "$reachable" "$count" "$expected" "$actual" "$match" "$result"
+done <<EOF
+$(nexa_records)
+EOF

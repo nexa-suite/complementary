@@ -1,0 +1,17 @@
+#!/bin/sh
+set -eu
+NEXA_TOOLS_ROOT=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
+. "$NEXA_TOOLS_ROOT/lib/nexa-contributors.sh"
+selected=${1-}; [ -n "$selected" ] || { echo "ERROR: contributor is required" >&2; exit 1; }
+record=$(nexa_record "$selected") || { echo "ERROR: unknown contributor" >&2; exit 1; }
+IFS='|' read -r github _ _ _ _ <<EOF
+$record
+EOF
+runtime="$NEXA_TOOLS_ROOT/runtime/$github.env"
+if [ -f "$runtime" ]; then
+  socket=$(awk -F= '$1 == "SSH_AUTH_SOCK" {print substr($0,index($0,"=")+1); exit}' "$runtime"); pid=$(awk -F= '$1 == "SSH_AGENT_PID" {print $2; exit}' "$runtime")
+  if [ -n "$socket" ] && [ -n "$pid" ] && nexa_runtime_agent_owned "$socket" "$pid"; then SSH_AUTH_SOCK="$socket" SSH_AGENT_PID="$pid" ssh-agent -k >/dev/null 2>&1 || true; fi
+  rm -f "$runtime"
+fi
+echo "CONTRIBUTOR DISARMED: $github"
+echo "Unrelated SSH agents preserved."

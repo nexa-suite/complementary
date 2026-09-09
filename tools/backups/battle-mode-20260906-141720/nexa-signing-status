@@ -1,0 +1,60 @@
+#!/bin/sh
+set -u
+NEXA_TOOLS_ROOT=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
+. "$NEXA_TOOLS_ROOT/lib/nexa-contributors.sh"
+root=$(git rev-parse --show-toplevel 2>/dev/null) || { echo "LOCAL IDENTITY CONSISTENCY: FAIL"; exit 1; }
+name=$(git config --local --get user.name 2>/dev/null || true)
+email=$(git config --local --get user.email 2>/dev/null || true)
+format=$(git config --local --get gpg.format 2>/dev/null || true)
+sign=$(git config --local --get commit.gpgsign 2>/dev/null || true)
+configured_public=$(nexa_expand_home "$(git config --local --get user.signingkey 2>/dev/null || true)")
+allowed=$(git config --local --get gpg.ssh.allowedSignersFile 2>/dev/null || true)
+record=$(awk -F '|' -v wanted="$configured_public" 'NF == 5 { p=$5; sub(/^\$HOME\//, "", p); if (ENVIRON["HOME"] "/" p == wanted) { print; found++ }} END { if (found != 1) exit 1 }' "$NEXA_CONTRIBUTORS_FILE" 2>/dev/null || true)
+contributor=UNKNOWN; expected_name=; expected_email=; expected_private=; expected_public=
+if [ -n "$record" ]; then
+  IFS='|' read -r contributor expected_name expected_email private_config public_config <<EOF
+$record
+EOF
+  expected_private=$(nexa_expand_home "$private_config")
+  expected_public=$(nexa_expand_home "$public_config")
+fi
+pass=1
+check_name=FAIL; [ -n "$expected_name" ] && [ "$name" = "$expected_name" ] && check_name=PASS || pass=0
+check_email=FAIL; [ -n "$expected_email" ] && [ "$email" = "$expected_email" ] && check_email=PASS || pass=0
+check_format=FAIL; [ "$format" = ssh ] && check_format=PASS || pass=0
+check_sign=FAIL; [ "$sign" = true ] && check_sign=PASS || pass=0
+check_path=FAIL; [ -n "$expected_public" ] && [ "$configured_public" = "$expected_public" ] && [ -f "$expected_public" ] && check_path=PASS || pass=0
+check_private=FAIL; [ -f "$expected_private" ] && check_private=PASS || pass=0
+agent_status=0; agent_file="/tmp/nexa-signing-status-agent.$$"; ssh-add -l >"$agent_file" 2>/dev/null || agent_status=$?
+check_agent=FAIL
+if [ "$agent_status" -eq 0 ] || [ "$agent_status" -eq 1 ]; then
+  [ "$check_path" = PASS ] && nexa_agent_has_key "$expected_public" && check_agent=PASS || true
+else
+  pass=0
+fi
+known_other=0
+if [ "$agent_status" -eq 0 ]; then
+  while IFS='|' read -r _ _ _ _ known_public_config; do
+    known_public=$(nexa_expand_home "$known_public_config")
+    if [ "$known_public" != "$expected_public" ] && [ -f "$known_public" ] && nexa_agent_has_key "$known_public"; then known_other=1; fi
+  done <<EOF
+$(nexa_records)
+EOF
+fi
+check_other=PASS; [ "$known_other" -eq 0 ] || { check_other=FAIL; pass=0; }
+check_allowed=FAIL; [ "$allowed" = "$HOME/.ssh/nexa_allowed_signers" ] && [ -f "$allowed" ] && check_allowed=PASS || pass=0
+check_principal=FAIL; check_key=FAIL; membership=FAIL
+if [ "$check_allowed" = PASS ] && [ -f "$expected_public" ] && [ -n "$expected_email" ]; then
+  key_type=$(awk 'NF >= 2 { print $1; exit }' "$expected_public")
+  key_blob=$(awk 'NF >= 2 { print $2; exit }' "$expected_public")
+  membership=$(awk -v e="$expected_email" -v t="$key_type" -v b="$key_blob" '/^[[:space:]]*#/ || NF == 0 { next } NF < 3 { bad=1; next } { split($1,p,","); for(i in p) if(p[i]==e){ principal=1; if($2==t && $3==b) key_match=1 }} END { if(bad) exit 2; if(principal && key_match) print "PASS"; else if(principal) print "PRINCIPAL_ONLY"; else print "FAIL" }' "$allowed" 2>/dev/null || echo FAIL)
+  [ "$membership" = PASS ] && check_principal=PASS && check_key=PASS || true
+  [ "$membership" = PRINCIPAL_ONLY ] && check_principal=PASS || true
+fi
+[ "$check_principal" = PASS ] || pass=0
+[ "$check_key" = PASS ] || pass=0
+rm -f "$agent_file" 2>/dev/null || true
+printf '%s\n' "CURRENT REPOSITORY: $root" "CURRENT BRANCH: $(git branch --show-current 2>/dev/null || true)" "CONTRIBUTOR: $contributor" "EMAIL: ${expected_email:-UNKNOWN}"
+printf '%s\n' "GIT USER NAME: $check_name" "GIT USER EMAIL: $check_email" "GPG FORMAT SSH: $check_format" "COMMIT SIGNING REQUIRED: $check_sign" "SIGNING KEY PATH: $check_path" "PRIVATE KEY FILE: $check_private" "AGENT KEY LOADED: $check_agent" "OTHER NEXA SIGNING KEYS LOADED: $check_other" "ALLOWED SIGNERS FILE: $check_allowed" "ALLOWED SIGNER PRINCIPAL: $check_principal" "ALLOWED SIGNER KEY MATCH: $check_key" "ALLOWED SIGNER MEMBERSHIP: $membership"
+if [ "$pass" -eq 1 ]; then echo "LOCAL IDENTITY CONSISTENCY: PASS"; exit 0; fi
+echo "LOCAL IDENTITY CONSISTENCY: FAIL"; exit 1

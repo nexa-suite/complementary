@@ -1,0 +1,24 @@
+#!/bin/sh
+set -eu
+NEXA_TOOLS_ROOT=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
+. "$NEXA_TOOLS_ROOT/lib/nexa-contributors.sh"
+while IFS='|' read -r _ _ _ _ public_config; do
+  public=$(nexa_expand_home "$public_config")
+  [ -f "$public" ] && ssh-add -d "$public" >/dev/null 2>&1 || true
+done <<EOF
+$(nexa_records)
+EOF
+if ! nexa_agent_is_healthy; then
+  echo "ERROR: ssh-agent unavailable; could not verify cleanup" >&2
+  exit 1
+fi
+remaining=0
+while IFS='|' read -r _ _ _ _ public_config; do
+  public=$(nexa_expand_home "$public_config")
+  [ -f "$public" ] && nexa_agent_has_key "$public" && remaining=1 || true
+done <<EOF
+$(nexa_records)
+EOF
+[ "$remaining" -eq 0 ] || { echo "ERROR: Nexa signing identity remains loaded" >&2; exit 1; }
+echo "Nexa contributor signing identities unloaded."
+echo "Unrelated SSH identities preserved."

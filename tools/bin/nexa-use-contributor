@@ -1,0 +1,68 @@
+#!/bin/sh
+set -eu
+NEXA_TOOLS_ROOT=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
+. "$NEXA_TOOLS_ROOT/lib/nexa-contributors.sh"
+
+git rev-parse --show-toplevel >/dev/null 2>&1 || { echo "ERROR: current directory is not inside a Git repository" >&2; exit 1; }
+mode=normal
+if [ "${1-}" = "--battle" ]; then mode=battle; shift; fi
+selected=${1-}
+[ -n "$selected" ] || { echo "ERROR: contributor is required" >&2; exit 1; }
+record=$(nexa_record "$selected") || { echo "ERROR: unknown contributor" >&2; exit 1; }
+IFS='|' read -r github name email private_config public_config <<EOF
+$record
+EOF
+private=$(nexa_expand_home "$private_config")
+public=$(nexa_expand_home "$public_config")
+[ -f "$private" ] || { echo "ERROR: private signing key missing" >&2; exit 1; }
+[ -f "$public" ] || { echo "ERROR: public signing key missing" >&2; exit 1; }
+
+key_type=$(awk 'NF >= 2 { print $1; exit }' "$public")
+key_blob=$(awk 'NF >= 2 { print $2; exit }' "$public")
+[ "$key_type" = ssh-ed25519 ] && [ -n "$key_blob" ] || { echo "ERROR: invalid public signing key" >&2; exit 1; }
+
+if [ "$mode" = battle ]; then
+  runtime="$NEXA_TOOLS_ROOT/runtime/$github.env"
+  [ -f "$runtime" ] || { echo "ERROR: contributor is not armed" >&2; exit 1; }
+  socket=$(awk -F= '$1 == "SSH_AUTH_SOCK" {print substr($0,index($0,"=")+1); exit}' "$runtime"); pid=$(awk -F= '$1 == "SSH_AGENT_PID" {print $2; exit}' "$runtime")
+  [ -n "$socket" ] && [ -n "$pid" ] && nexa_runtime_agent_owned "$socket" "$pid" || { echo "ERROR: dedicated agent is stale" >&2; exit 1; }
+  listing=$(SSH_AUTH_SOCK="$socket" ssh-add -L 2>/dev/null || true); count=$(printf '%s\n' "$listing" | awk 'NF >= 2 {n++} END {print n+0}')
+  [ "$count" -eq 1 ] && printf '%s\n' "$listing" | awk -v t="$key_type" -v b="$key_blob" '$1 == t && $2 == b {found=1} END {exit(found ? 0 : 1)}' || { echo "ERROR: dedicated agent identity mismatch" >&2; exit 1; }
+  git config --local user.name "$name"; git config --local user.email "$email"; git config --local gpg.format ssh; git config --local user.signingkey "$public"; git config --local commit.gpgsign true; git config --local gpg.ssh.allowedSignersFile "$HOME/.ssh/nexa_allowed_signers"
+  echo "BATTLE CONTRIBUTOR: $github"; echo "DEDICATED AGENT: PASS"; echo "EXPECTED KEY: PASS"
+  SSH_AUTH_SOCK="$socket" "$NEXA_TOOLS_ROOT/bin/nexa-signing-status"
+  exit $?
+fi
+
+echo "SELECTED GITHUB: $github"
+echo "SELECTED EMAIL: $email"
+echo "Removing only known Nexa signing identities. Enter passphrase once."
+while IFS='|' read -r _ _ _ _ known_public_config; do
+  known_public=$(nexa_expand_home "$known_public_config")
+  [ -f "$known_public" ] && ssh-add -d "$known_public" >/dev/null 2>&1 || true
+done <<EOF
+$(nexa_records)
+EOF
+
+if ! nexa_agent_is_healthy; then
+  echo "ERROR: ssh-agent unavailable" >&2
+  exit 1
+fi
+ssh-add "$private"
+
+if ! nexa_agent_has_key "$public"; then
+  echo "ERROR: selected public key not loaded in ssh-agent" >&2
+  exit 1
+fi
+expected_fingerprint=$(ssh-keygen -lf "$public" | awk 'NR == 1 { print $2 }')
+loaded_fingerprint=$(ssh-add -L | awk -v t="$key_type" -v b="$key_blob" '$1 == t && $2 == b { print; exit }' | ssh-keygen -lf - | awk 'NR == 1 { print $2 }')
+[ "$expected_fingerprint" = "$loaded_fingerprint" ] || { echo "ERROR: selected agent fingerprint mismatch" >&2; exit 1; }
+
+git config --local user.name "$name"
+git config --local user.email "$email"
+git config --local gpg.format ssh
+git config --local user.signingkey "$public"
+git config --local commit.gpgsign true
+git config --local gpg.ssh.allowedSignersFile "$HOME/.ssh/nexa_allowed_signers"
+
+"$NEXA_TOOLS_ROOT/bin/nexa-signing-status"

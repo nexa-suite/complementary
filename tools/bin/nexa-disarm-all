@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+NEXA_TOOLS_ROOT=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
+. "$NEXA_TOOLS_ROOT/lib/nexa-contributors.sh"
+while IFS='|' read -r github _ _ _ _; do "$NEXA_TOOLS_ROOT/bin/nexa-disarm-contributor" "$github"; done <<EOF
+$(nexa_records)
+EOF
+echo "ALL NEXA BATTLE AGENTS DISARMED."
+echo "Unrelated SSH agents preserved."

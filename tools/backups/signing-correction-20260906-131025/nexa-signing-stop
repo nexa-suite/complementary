@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+ssh-add -D
+echo "Nexa contributor signing identities unloaded."

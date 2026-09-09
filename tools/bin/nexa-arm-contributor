@@ -1,0 +1,47 @@
+#!/bin/sh
+set -eu
+NEXA_TOOLS_ROOT=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
+. "$NEXA_TOOLS_ROOT/lib/nexa-contributors.sh"
+selected=${1-}; [ -n "$selected" ] || { echo "ERROR: contributor is required" >&2; exit 1; }
+record=$(nexa_record "$selected") || { echo "ERROR: unknown contributor" >&2; exit 1; }
+IFS='|' read -r github name email private_config public_config <<EOF
+$record
+EOF
+private=$(nexa_expand_home "$private_config"); public=$(nexa_expand_home "$public_config")
+[ -f "$private" ] && [ -f "$public" ] || { echo "ERROR: contributor keypair missing" >&2; exit 1; }
+fingerprint=$(ssh-keygen -lf "$public" | awk 'NR == 1 { print $2 }')
+runtime_dir="$NEXA_TOOLS_ROOT/runtime"; runtime="$runtime_dir/$github.env"
+mkdir -p "$runtime_dir"; chmod 700 "$runtime_dir"
+if [ -f "$runtime" ]; then
+  socket=$(awk -F= '$1 == "SSH_AUTH_SOCK" {print substr($0,index($0,"=")+1); exit}' "$runtime"); pid=$(awk -F= '$1 == "SSH_AGENT_PID" {print $2; exit}' "$runtime")
+  if [ -n "$socket" ] && [ -n "$pid" ] && nexa_runtime_agent_owned "$socket" "$pid"; then
+    listing=$(SSH_AUTH_SOCK="$socket" ssh-add -L 2>/dev/null || true); count=$(printf '%s\n' "$listing" | awk 'NF >= 2 {n++} END {print n+0}')
+    type=$(awk 'NR == 1 {print $1}' "$public"); blob=$(awk 'NR == 1 {print $2}' "$public")
+    if [ "$count" -eq 1 ] && printf '%s\n' "$listing" | awk -v t="$type" -v b="$blob" '$1 == t && $2 == b {found=1} END {exit(found ? 0 : 1)}'; then
+      echo "CONTRIBUTOR ALREADY ARMED: $github"; echo "FINGERPRINT: $fingerprint"; echo "KEY COUNT: 1"; echo "PASSPHRASE STORED: NO"; exit 0
+    fi
+    SSH_AUTH_SOCK="$socket" SSH_AGENT_PID="$pid" ssh-agent -k >/dev/null 2>&1 || true
+  fi
+  rm -f "$runtime"
+fi
+agent_output=$(ssh-agent -s)
+socket=$(printf '%s\n' "$agent_output" | awk -F'[=;]' '/SSH_AUTH_SOCK=/{print $2; exit}')
+pid=$(printf '%s\n' "$agent_output" | awk -F'[=;]' '/SSH_AGENT_PID=/{print $2; exit}')
+[ -n "$socket" ] && [ -n "$pid" ] || { echo "ERROR: dedicated ssh-agent failed" >&2; exit 1; }
+umask 077
+printf 'SSH_AUTH_SOCK=%s\nSSH_AGENT_PID=%s\nCONTRIBUTOR=%s\nFINGERPRINT=%s\nCREATED_AT=%s\n' "$socket" "$pid" "$github" "$fingerprint" "$(date -u '+%Y-%m-%dT%H:%M:%SZ')" > "$runtime"
+if ! SSH_AUTH_SOCK="$socket" ssh-add "$private"; then
+  SSH_AUTH_SOCK="$socket" SSH_AGENT_PID="$pid" ssh-agent -k >/dev/null 2>&1 || true; rm -f "$runtime"; echo "ERROR: selected private key could not be loaded" >&2; exit 1
+fi
+agent_lines=$(SSH_AUTH_SOCK="$socket" ssh-add -L 2>/dev/null || true)
+key_type=$(awk 'NR == 1 {print $1}' "$public"); key_blob=$(awk 'NR == 1 {print $2}' "$public")
+key_count=$(printf '%s\n' "$agent_lines" | awk 'NF >= 2 {n++} END {print n+0}')
+loaded_line=$(printf '%s\n' "$agent_lines" | awk -v t="$key_type" -v b="$key_blob" '$1 == t && $2 == b {print; exit}')
+loaded_fingerprint=$(printf '%s\n' "$loaded_line" | ssh-keygen -lf - 2>/dev/null | awk 'NR == 1 {print $2}')
+if [ "$key_count" -ne 1 ] || [ -z "$loaded_line" ] || [ "$loaded_fingerprint" != "$fingerprint" ]; then
+  SSH_AUTH_SOCK="$socket" SSH_AGENT_PID="$pid" ssh-agent -k >/dev/null 2>&1 || true; rm -f "$runtime"; echo "ERROR: dedicated agent key validation failed" >&2; exit 1
+fi
+echo "CONTRIBUTOR ARMED: $github"
+echo "FINGERPRINT: $fingerprint"
+echo "KEY COUNT: 1"
+echo "PASSPHRASE STORED: NO"

@@ -1,0 +1,64 @@
+skill	status	nexa_area	purpose	bundle_path
+using-superpowers	base	Proceso transversal	Descubrimiento de skills y disciplina de ejecución	skills/superpowers
+domain-decomposition-api-design-advisor	base	Blueprint/API	Bounded Contexts, workflows, límites y contratos antes de implementar	skills/domain-decomposition-api-design-advisor
+design-system	base	Design Lab	Tokens, especificaciones de componentes y sistema visual	skills/design-system
+frontend-ui-engineering	base	Web UI	Interfaces accesibles, responsive y de calidad de producción	skills/frontend-ui-engineering
+ui-ux-pro-max	base	UX/UI	Decisiones de estilos, layout, tipografía, accesibilidad y visualización	skills/ui-ux-pro-max
+nexa-design	base	Nexa UI	Adopción de Design Lab en Angular con evidencia visual y accesibilidad	skills/nexa-design
+angular-developer	base	Angular	Arquitectura Angular moderna y guía general de implementación	skills/angular-developer
+angular-component	base	Angular	Standalone components, inputs/outputs signal-based y semántica accesible	skills/angular-component
+angular-di	base	Angular	Inyección con inject(), tokens y configuración de providers	skills/angular-di
+angular-directives	base	Angular	Directivas reutilizables y composición de comportamiento DOM	skills/angular-directives
+angular-forms	base	Angular	Signal Forms, validación y formularios dinámicos	skills/angular-forms
+angular-http	base	Angular/API	HttpClient, resource/httpResource, carga, errores e interceptores	skills/angular-http
+angular-routing	base	Angular	Lazy routes, guards funcionales, resolvers y parámetros	skills/angular-routing
+angular-signals	base	Angular	Estado reactivo con signal, computed, linkedSignal y effect	skills/angular-signals
+angular-testing	base	Angular	Tests unitarios e integración con TestBed y Vitest/Jasmine	skills/angular-testing
+angular-tooling	base	Angular	CLI, generación, build, test y configuración del workspace	skills/angular-tooling
+code-reviewer	base	API	Review Java 25/Spring Boot 4, arquitectura, JSpecify, seguridad y rendimiento	skills/code-reviewer
+spring-data-jpa	base	API	Repositorios JPA, proyecciones, queries, relaciones y rendimiento	skills/spring-data-jpa
+transaction-consistency-designer	base	API/Dominio	Transacciones, rollback, idempotencia, locks y consistencia	skills/transaction-consistency-designer
+schema-migration-planner	base	API/PostgreSQL	Evolución segura de schema, Flyway y compatibilidad de despliegues	skills/schema-migration-planner
+performance-concurrency-advisor	base	API/Operaciones	Latencia, throughput, pools, concurrencia, SQL y señales operativas	skills/performance-concurrency-advisor
+observability-integrator	base	API/Operaciones	Logs, métricas, tracing, health endpoints y diagnóstico	skills/observability-integrator
+playwright	base	QA Web	Automatización de navegador, flujos, extracción y screenshots	skills/playwright
+playwright-interactive	base	QA Web	Depuración iterativa persistente en navegador/Electron	skills/playwright-interactive
+gh-address-comments	base	GitHub	Atender comentarios de PR con evidencia y gh CLI	skills/gh-address-comments
+gh-fix-ci	base	GitHub CI	Diagnosticar checks fallidos y logs de GitHub Actions	skills/gh-fix-ci
+pdf	base	Blueprint/Académico	Leer, crear, renderizar y verificar PDFs con control visual	skills/pdf
+angular-new-app	conditional	Angular	Crear una aplicación Angular nueva; no aplica al mantenimiento normal	skills/angular-new-app
+angular-ssr	conditional	Angular	SSR, hydration y prerendering si una superficie lo adopta	skills/angular-ssr
+creating-springboot-projects	conditional	API	Scaffolding de nuevos servicios Java 25/Spring Boot 4	skills/creating-springboot-projects
+springboot-migration	conditional	API	Migraciones concretas hacia Spring Boot 4/Java 25	skills/springboot-migration
+spring-security-configurator-auditor	conditional	API/Seguridad	Auditar filter chains, JWT/OAuth2, CORS, CSRF y method security	skills/spring-security-configurator-auditor
+security-threat-model	conditional	Seguridad	Threat modeling basado en repositorio, activos y trust boundaries	skills/security-threat-model
+security-best-practices	conditional	Angular/TypeScript	Revisión secure-by-default para código TypeScript/JavaScript	skills/security-best-practices
+figma	conditional	Diseño	Contexto, screenshots, variables, assets y traducción Figma-código	skills/figma
+figma-use	conditional	Diseño	Prerequisito para operaciones de lectura/escritura con Figma MCP	skills/figma-use
+figma-generate-design	conditional	Diseño	Construir o actualizar pantallas completas en Figma	skills/figma-generate-design
+figma-generate-library	conditional	Design Lab	Crear o reconciliar librerías, variables y tokens en Figma	skills/figma-generate-library
+figma-implement-design	conditional	Angular/UI	Implementar diseños Figma con fidelidad visual	skills/figma-implement-design
+figma-create-design-system-rules	conditional	Design Lab	Generar reglas de diseño específicas para el código	skills/figma-create-design-system-rules
+figma-code-connect-components	conditional	Design Lab	Mapear componentes Figma con componentes de código	skills/figma-code-connect-components
+render-deploy	conditional	Deploy	Analizar y desplegar servicios o sitios en Render	skills/render-deploy
+netlify-deploy	conditional	Deploy	Preview/producción de sitios en Netlify	skills/netlify-deploy
+vercel-deploy	conditional	Deploy	Preview/producción de aplicaciones en Vercel	skills/vercel-deploy
+cloudflare-deploy	conditional	Deploy	Workers, Pages e infraestructura Cloudflare	skills/cloudflare-deploy
+screenshot	conditional	Evidencia	Capturas del sistema o escritorio cuando se soliciten	skills/screenshot
+sentry	conditional	Operaciones	Consultar issues/eventos y salud de Sentry	skills/sentry
+jupyter-notebook	conditional	Analytics	Crear notebooks reproducibles de análisis o experimentos	skills/jupyter-notebook
+flutter-apply-architecture-best-practices	future	Mobile	Arquitectura Flutter por capas UI, Logic y Data	skills/flutter-apply-architecture-best-practices
+flutter-add-integration-test	future	Mobile	Integración Flutter Driver/integration_test para flujos	skills/flutter-add-integration-test
+flutter-add-widget-preview	future	Mobile	Previews interactivos de widgets	skills/flutter-add-widget-preview
+flutter-add-widget-test	future	Mobile	Tests de widgets con WidgetTester	skills/flutter-add-widget-test
+flutter-build-responsive-layout	future	Mobile	Layouts Flutter responsive para móvil/tablet/desktop	skills/flutter-build-responsive-layout
+flutter-fix-layout-issues	future	Mobile	Diagnóstico de overflows y constraints Flutter	skills/flutter-fix-layout-issues
+flutter-implement-json-serialization	future	Mobile/API	Modelos Dart con fromJson/toJson	skills/flutter-implement-json-serialization
+flutter-setup-declarative-routing	future	Mobile	Routing declarativo y deep links con go_router	skills/flutter-setup-declarative-routing
+flutter-setup-localization	future	Mobile	Localización Flutter, intl y generación de l10n	skills/flutter-setup-localization
+flutter-use-http-package	future	Mobile/API	Consumo REST desde Flutter con http	skills/flutter-use-http-package
+swiftui-expert-skill	future	Mobile	SwiftUI, estado, composición, rendimiento y accesibilidad	skills/swiftui-expert-skill
+kotlin-tooling-agp9-migration	future	Mobile/KMP	Migración de tooling Kotlin Multiplatform/AGP 9	skills/kotlin-tooling-agp9-migration
+kotlin-tooling-cocoapods-spm-migration	future	Mobile/KMP	Migración CocoaPods a Swift Package Manager	skills/kotlin-tooling-cocoapods-spm-migration
+kotlin-tooling-immutable-collections-0-5-x-migration	future	Mobile/Kotlin	Migración de kotlin immutable collections	skills/kotlin-tooling-immutable-collections-0-5-x-migration
+kotlin-tooling-java-to-kotlin	future	Mobile/Kotlin	Conversión segura de Java a Kotlin	skills/kotlin-tooling-java-to-kotlin

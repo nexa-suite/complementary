@@ -1,0 +1,44 @@
+#!/bin/sh
+set -eu
+
+NEXA_TOOLS_ROOT=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
+. "$NEXA_TOOLS_ROOT/lib/nexa-contributors.sh"
+
+total=$(nexa_records | awk 'END { print NR + 0 }')
+if [ "$total" -ne 5 ]; then
+  echo "ERROR: canonical registry must contain five contributors" >&2
+  exit 1
+fi
+
+echo "NEXA BATTLE SESSION INITIALIZATION"
+echo "Five contributor identities will now be unlocked interactively."
+echo "Passphrases:"
+echo "- are entered directly into ssh-add"
+echo "- must not be captured, logged, stored, or passed through environment variables or command-line arguments"
+
+index=0
+while IFS='|' read -r github _ _ _ _; do
+  index=$((index + 1))
+  echo "[$index/$total] $github"
+  echo "Waiting for contributor passphrase..."
+  if "$NEXA_TOOLS_ROOT/bin/nexa-arm-contributor" "$github"; then
+    echo "$github: READY"
+  else
+    echo "$github: FAILED"
+    exit 1
+  fi
+done <<EOF
+$(nexa_records)
+EOF
+
+battle_status=$("$NEXA_TOOLS_ROOT/bin/nexa-battle-status")
+printf '%s\n' "$battle_status"
+ready=$(printf '%s\n' "$battle_status" | awk -F'|' '$NF ~ /READY/ { n++ } END { print n + 0 }')
+if [ "$ready" -ne 5 ]; then
+  echo "NEXA BATTLE MODE: FAILED ($ready/5 READY)" >&2
+  exit 1
+fi
+
+echo "NEXA BATTLE MODE: 5/5 READY"
+echo "HUMAN INTERACTION FINISHED."
+echo "Codex may now execute authorized Git operations through Battle Mode while agents remain alive."

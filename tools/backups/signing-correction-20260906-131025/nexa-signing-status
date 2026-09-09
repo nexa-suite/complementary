@@ -1,0 +1,25 @@
+#!/bin/sh
+set -eu
+root=$(git rev-parse --show-toplevel 2>/dev/null) || { echo "IDENTITY CONSISTENCY: FAIL"; exit 1; }
+name=$(git config --local --get user.name || true); email=$(git config --local --get user.email || true)
+format=$(git config --local --get gpg.format || true); pub=$(git config --local --get user.signingkey || true)
+sign=$(git config --local --get commit.gpgsign || true); allowed=$(git config --local --get gpg.ssh.allowedSignersFile || true)
+printf '%s\n' "CURRENT REPOSITORY: $root" "CURRENT BRANCH: $(git branch --show-current)" "GIT AUTHOR NAME: $name" "GIT AUTHOR EMAIL: $email" "SIGNING FORMAT: $format" "SIGNING PUBLIC KEY: $pub" "SSH AGENT IDENTITIES:"
+ssh-add -l 2>&1 || true
+echo "ALLOWED SIGNERS FILE: $allowed"
+expected_email=; expected_name=
+case "$pub" in
+  "$HOME/.ssh/nexa_DiegoS284_signing.pub") expected_name=DiegoS284; expected_email=diego64g284@gmail.com;;
+  "$HOME/.ssh/nexa_GerardRojasMancilla_signing.pub") expected_name=GerardRojasMancilla; expected_email=U202413142@upc.edu.pe;;
+  "$HOME/.ssh/nexa_R0obxdnt_signing.pub") expected_name=R0obxdnt; expected_email=grtdls525gino1@gmail.com;;
+  "$HOME/.ssh/nexa_spinedo214_signing.pub") expected_name=spinedo214; expected_email=sebastianpinedo214@gmail.com;;
+  "$HOME/.ssh/nexa_JoaquinBV511_signing.pub") expected_name=JoaquinBV511; expected_email=joaquinverdebueno@gmail.com;;
+esac
+pass=1
+[ "$name" = "$expected_name" ] && [ "$email" = "$expected_email" ] || pass=0
+[ "$format" = ssh ] && [ "$sign" = true ] && [ -f "$pub" ] || pass=0
+[ -f "$HOME/.ssh/nexa_allowed_signers" ] || pass=0
+if [ -f "$pub" ]; then fp=$(ssh-keygen -lf "$pub" | awk '{print $2}'); ssh-add -l 2>/dev/null | awk '{print $2}' | grep -Fqx "$fp" || pass=0; fi
+[ "$pass" -eq 1 ] && echo "EXPECTED CONTRIBUTOR: $expected_name" || echo "EXPECTED CONTRIBUTOR: UNKNOWN_OR_MISMATCH"
+[ "$pass" -eq 1 ] && echo "IDENTITY CONSISTENCY: PASS" || echo "IDENTITY CONSISTENCY: FAIL"
+[ "$pass" -eq 1 ]

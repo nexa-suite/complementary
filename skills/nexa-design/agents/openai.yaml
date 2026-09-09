@@ -1,0 +1,8 @@
+interface:
+  display_name: "Nexa Design"
+  short_description: "Build Nexa UI from Design Lab evidence"
+  brand_color: "#2563EB"
+  default_prompt: "Use $nexa-design to build or review this Nexa interface from the released Design Lab baseline."
+
+policy:
+  allow_implicit_invocation: true

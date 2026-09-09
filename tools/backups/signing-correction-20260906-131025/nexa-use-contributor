@@ -1,0 +1,29 @@
+#!/bin/sh
+set -eu
+if ! git rev-parse --show-toplevel >/dev/null 2>&1; then echo "ERROR: current directory is not inside a Git repository" >&2; exit 1; fi
+case "${1-}" in
+  DiegoS284) name=DiegoS284; email=diego64g284@gmail.com; key="$HOME/.ssh/nexa_DiegoS284_signing";;
+  GerardRojasMancilla) name=GerardRojasMancilla; email=U202413142@upc.edu.pe; key="$HOME/.ssh/nexa_GerardRojasMancilla_signing";;
+  R0obxdnt) name=R0obxdnt; email=grtdls525gino1@gmail.com; key="$HOME/.ssh/nexa_R0obxdnt_signing";;
+  spinedo214) name=spinedo214; email=sebastianpinedo214@gmail.com; key="$HOME/.ssh/nexa_spinedo214_signing";;
+  JoaquinBV511) name=JoaquinBV511; email=joaquinverdebueno@gmail.com; key="$HOME/.ssh/nexa_JoaquinBV511_signing";;
+  *) echo "ERROR: unknown contributor" >&2; exit 1;;
+esac
+pub="$key.pub"
+if [ ! -f "$key" ] || [ ! -f "$pub" ]; then echo "ERROR: signing keypair missing for $1" >&2; exit 1; fi
+echo "SELECTED GITHUB: $1"
+echo "SELECTED EMAIL: $email"
+echo "Clearing ssh-agent identities. Enter passphrase interactively."
+ssh-add -D
+ssh-add "$key"
+git config --local user.name "$name"
+git config --local user.email "$email"
+git config --local gpg.format ssh
+git config --local user.signingkey "$pub"
+git config --local commit.gpgsign true
+git config --local gpg.ssh.allowedSignersFile "$HOME/.ssh/nexa_allowed_signers"
+git config --local --get user.name
+git config --local --get user.email
+git config --local --get user.signingkey
+git config --local --get commit.gpgsign
+ssh-add -l
