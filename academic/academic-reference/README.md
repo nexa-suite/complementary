@@ -1,17 +1,16 @@
-# Academic Reference
+---
+status: canonical
+type: academic-reference-root
+date: 2026-09-09
+---
 
-Fuentes canónicas metodológicas de referencia académica obligatoria para la elaboración y sustentación del informe final de ingeniería de software.
+# Canon Bibliográfico y Referencias Académicas Oficiales
 
-## Pilares Metodológicos Canónicos
+Este repositorio consolida las ediciones digitales canónicas completas en formato Markdown, con sus correspondientes activos visuales y modelos de referencia metodológica:
 
-1. **[Docs-as-Code](docs-as-code/docs-as-code-guide.md)**
-   - Estándar de gobernanza, documentación técnica en Markdown, C4, Mermaid, PlantUML y linters.
-   - Guía oficial UPC: [](docs-as-code/upc-software-engineering-docs-as-code-v1.pdf).
-
-2. **[Lean UX 3rd Edition](lean-ux/lean-ux-3rd-edition.md)**
-   - Metodología fundacional para el Capítulo 1 (Presentación y Perfil de la Solución), definición de problem statements, business outcomes, proto-personas, hipótesis y diseño colaborativo.
-   - Edición digital completa en Markdown con 68 diagramas en  y PDF oficial [](lean-ux/lean-ux-3e.pdf).
-
-3. **[Scrum SBOK Guide 5th Edition](scrum/scrum-sbok-guide-5th-edition-spanish.md)**
-   - Marco de trabajo ágil oficial para el Capítulo 4 (Implementación y Validación), principios, aspectos organizacionales y las 5 fases del ciclo de vida de Scrum.
-   - Edición digital completa en español con 194 diagramas en  y PDF oficial [](scrum/SCRUMstudy-SBOK-Guide-5th-Edition-Spanish.pdf).
+| Área / Referencia | Documentos Digitales | Assets Extraídos | Rol en el Reporte Académico |
+| :--- | :--- | :---: | :--- |
+| [**Docs-as-Code**](docs-as-code/docs-as-code-guide.md) | `docs-as-code-guide.md`<br>`upc-software-engineering-docs-as-code-v1.pdf` | N/A | Estándar obligatorio de documentación técnica y gobernanza de entregables. |
+| [**Domain-Driven Design**](domain-driven-design/README.md) | `domain-driven-design-eric-evans.md`<br>`domain-driven-design-distilled-vaughn-vernon.md` | 546 diagramas | Tratado fundacional de Evans y destilación del Core de Vernon para diseño estratégico y táctico DDD. |
+| [**Lean UX**](lean-ux/lean-ux-3rd-edition.md) | `lean-ux-3rd-edition.md`<br>`lean-ux-3e.pdf` | 68 figuras | Marco metodológico para hipótesis, canvas, supuestos e investigación de usuarios. |
+| [**Scrum SBOK**](scrum/scrum-sbok-guide-5th-edition-spanish.md) | `scrum-sbok-guide-5th-edition-spanish.md`<br>`SCRUMstudy-SBOK-Guide-5th-Edition-Spanish.pdf` | 194 diagramas | Guía SBOK 5ta Edición (451 páginas) para procesos ágiles, sprints y organización colaborativa. |

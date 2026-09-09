@@ -41,15 +41,7 @@ En Ingeniería de Software, el logro contribuye a alcanzar el:
 
 #### **<u>Enunciado</u>** 
 
-El curso de Aplicaciones para Dispositivos Móviles es de naturaleza teórico-práctica, por lo que es necesario evidenciar la capacidad para desarrollar aplicaciones móviles aplicando los conceptos, técnicas y buenas prácticas impartidos en el curso. Este trabajo tiene por objetivo desarrollar un producto de software consistente en una aplicación móvil nativa y multi plataforma orientada a satisfacer necesidades identificadas para un público objetivo, haciendo uso de las herramientas y tecnología 
-
-
-
-<u>Página 1 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+El curso de Aplicaciones para Dispositivos Móviles es de naturaleza teórico-práctica, por lo que es necesario evidenciar la capacidad para desarrollar aplicaciones móviles aplicando los conceptos, técnicas y buenas prácticas impartidos en el curso. Este trabajo tiene por objetivo desarrollar un producto de software consistente en una aplicación móvil nativa y multi plataforma orientada a satisfacer necesidades identificadas para un público objetivo, haciendo uso de las herramientas y tecnología
 
 utilizadas en el curso, aplicando conceptos y técnicas revisados en clase o resultado de la investigación. 
 
@@ -75,13 +67,7 @@ La calificación del trabajo final es individual donde se medirá el rendimiento
 
 Es importarte tener en cuenta que el plazo de entrega de los trabajos es impostergable y por ningún motivo y/o circunstancia se recibirá trabajos fuera de la fecha y hora establecidos. 
 
-Un representante del equipo subirá al aula virtual, en la actividad indicada por el docente, los siguientes archivos: documento de Informe del Proyecto (en versión PDF), documento de presentación (en versión PowerPoint y PDF), Reporte de participación (en versión Word y PDF), archivo .zip con artefactos y proyectos de software (si fuera aplicable), video de exposición en formato .mp4. Tanto los artefactos y el proyecto de software así como el video de exposición, además de subirse al aula virtual, deben subirse a un OneDrive que será facilitado por el docente. 
-
-<u>Página 2 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+Un representante del equipo subirá al aula virtual, en la actividad indicada por el docente, los siguientes archivos: documento de Informe del Proyecto (en versión PDF), documento de presentación (en versión PowerPoint y PDF), Reporte de participación (en versión Word y PDF), archivo .zip con artefactos y proyectos de software (si fuera aplicable), video de exposición en formato .mp4. Tanto los artefactos y el proyecto de software así como el video de exposición, además de subirse al aula virtual, deben subirse a un OneDrive que será facilitado por el docente.
 
 #### **Nomenclatura de archivos** 
 
@@ -119,15 +105,7 @@ Este documento es elaborado por el Team Leader, en el cual se detalla y evalúa 
 
 #### <u>Artefactos</u> 
 
-Cuando corresponda, el equipo debe adjuntar todos los artefactos elaborados. 
-
-
-
-<u>Página 3 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+Cuando corresponda, el equipo debe adjuntar todos los artefactos elaborados.
 
 Capturas en imagen de estos artefactos deben incluirse en el Document Report y en la Presentación (keynote) del Proyecto en las secciones adecuadas y con las explicaciones y análisis que correspondan. Del mismo modo, los diagramas en herramientas indicadas como LucidChart o Figma /Adobe XD, deben incluirse como imágenes en los documentos mencionados junto con su explicación, además de ser mostradas y explicadas en el video de exposición. 
 
@@ -149,13 +127,7 @@ Todas las entregas se realizan antes del inicio de la segunda sesión síncrona 
 
 - Revisar con detenimiento este documento (Final Project Statement), así como las rúbricas proporcionadas al inicio del ciclo. 
 
-- Antes de cada entrega, el equipo debe garantizar que el documento del reporte cumpla en su totalidad con las normas APA 7 (excepto las tablas complejas). Esto abarca el formato general del documento, las normas tipográficas y aspectos esenciales como la estructura del contenido, las citas y las referencias. En cuanto a las normas tipográficas, se debe evitar la presencia de viudas (líneas de texto que quedan solas al final de un párrafo al inicio de una página) y huérfanas (líneas de texto que quedan solas al inicio de un párrafo al final de una página). Además, el texto debe estar alineado a la izquierda, con interlineado 1.5, sangrías consistentes de 0.5 pulgadas en la primera línea de cada párrafo, márgenes adecuados, y una coherencia visual en títulos y subtítulos. Asimismo, las páginas deben numerarse correctamente, y las citas y referencias deben ajustarse al formato de sangría francesa, según lo establecido en las normas APA 7. 
-
-<u>Página 4 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+- Antes de cada entrega, el equipo debe garantizar que el documento del reporte cumpla en su totalidad con las normas APA 7 (excepto las tablas complejas). Esto abarca el formato general del documento, las normas tipográficas y aspectos esenciales como la estructura del contenido, las citas y las referencias. En cuanto a las normas tipográficas, se debe evitar la presencia de viudas (líneas de texto que quedan solas al final de un párrafo al inicio de una página) y huérfanas (líneas de texto que quedan solas al inicio de un párrafo al final de una página). Además, el texto debe estar alineado a la izquierda, con interlineado 1.5, sangrías consistentes de 0.5 pulgadas en la primera línea de cada párrafo, márgenes adecuados, y una coherencia visual en títulos y subtítulos. Asimismo, las páginas deben numerarse correctamente, y las citas y referencias deben ajustarse al formato de sangría francesa, según lo establecido en las normas APA 7.
 
 - Además, el equipo debe verificar que los archivos PDF no contengan errores de conversión y que todos los documentos se hayan cargado correctamente en el aula virtual. 
 
@@ -201,15 +173,7 @@ Tabla de contenidos
 
 - 1.2.2.2. Lean UX Assumptions 
 
-- 1.2.2.3. Lean UX Hypothesis Statements 
-
-
-
-<u>Página 5 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+- 1.2.2.3. Lean UX Hypothesis Statements
 
 - 1.2.2.4. Lean UX Canvas 
 
@@ -281,13 +245,7 @@ _3.1. Product design_
 
 - 3.1.1.1. General Style Guidelines 
 
-- 3.1.2. Information Architecture 
-
-<u>Página 6 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+- 3.1.2. Information Architecture
 
 - 3.1.2.1. Organization Systems 
 
@@ -365,15 +323,7 @@ Conclusiones y recomendaciones. Video App Validation Video About the product Vid
 
 #### **Glosario Bibliografía** 
 
-**Anexos** 
-
-
-
-<u>Página 7 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+**Anexos**
 
 #### **<u>Consideraciones sobre los componentes</u>** 
 
@@ -402,13 +352,7 @@ La sección inicia en una nueva página. Considere en la elaboración 4 niveles 
 
 Cada participante del equipo debe colaborar a fin de que se redacte los sustentos y evidencias de las actividades realizadas en el trabajo final han ayudado a desarrollar las dimensiones del student outcome. Por ello en esta sección debe quedar descrito la relación entre el outcome, sus dimensiones y el trabajo que han realizado. Esto se complementa con lo expresado en los testimonios expuestos que forman parte del video _About The Team_ . 
 
-La sección inicia en una nueva página. Debe incluir el párrafo introductorio y el cuadro de Student Outcome tal como se indica en la sección de Anexos de este documento. En las celdas Acciones realizadas, debe especificarse por cada participante: Apellidos, Nombres y a continuación, cada entrega (TB1, TB2, etc.) con las acciones específicas realizadas que se relacionen con el criterio del Outcome al que corresponda la celda. Esta celda se irá expandiendo en cada entrega. Las celdas Conclusiones se llenan de forma grupal y son acumulables, es decir se van expandiendo en cada entrega. Vea especificaciones sobre cómo estructurar esta sección en el _Anexo A. Estructura para_ 
-
-<u>Página 8 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+La sección inicia en una nueva página. Debe incluir el párrafo introductorio y el cuadro de Student Outcome tal como se indica en la sección de Anexos de este documento. En las celdas Acciones realizadas, debe especificarse por cada participante: Apellidos, Nombres y a continuación, cada entrega (TB1, TB2, etc.) con las acciones específicas realizadas que se relacionen con el criterio del Outcome al que corresponda la celda. Esta celda se irá expandiendo en cada entrega. Las celdas Conclusiones se llenan de forma grupal y son acumulables, es decir se van expandiendo en cada entrega. Vea especificaciones sobre cómo estructurar esta sección en el _Anexo A. Estructura para_
 
 _la sección Objetivo del Estudiante (Student Outcome)_ . El párrafo introductorio antes del cuadro que se aprecia en el anexo referido debe colocarse también de forma idéntica en su informe. 
 
@@ -438,15 +382,7 @@ Esta sección incluye la descripción de los segmentos asociados al dominio del 
 
 #### **Competidores** 
 
-En esta sección se realiza la identificación y descripción de los principales competidores directos (3 como mínimo) con modelos de negocio basados en 
-
-
-
-<u>Página 9 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+En esta sección se realiza la identificación y descripción de los principales competidores directos (3 como mínimo) con modelos de negocio basados en
 
 productos digitales similares, o en su defecto competidores indirectos con ofertas parcialmente similares. 
 
@@ -469,14 +405,6 @@ Esta sección tiene como objetivo profundizar en el conocimiento de los competid
 |lisis S|Debilidades|||||
 |Aná|Oportunidades<br>Amenazas|||||
 
-
-
-<u>Página 10 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
-
 Para cada uno de ellos, es necesario identificar las fortalezas y debilidades, así como las oportunidades y amenazas asociadas. Además, es importante que el análisis FODA se enfoque específicamente en la competencia, permitiendo así una evaluación más precisa y estratégica del entorno. 
 
 _Ejemplo: Fortaleza: Innovación constante en el desarrollo de nuevas funcionalidades. Al comparar esta fortaleza con la competencia, se observa que, aunque los competidores también innovan, nuestra velocidad de implementación de nuevas funciones y la calidad de estas son superiores, lo que nos permite mantener una ventaja competitiva en el mercado._ 
@@ -497,15 +425,7 @@ Dicha información debe incluir características demográficas (como género, ed
 
 #### **Registro de entrevistas** 
 
-Para cada segmento se requiere de 3 a 5 entrevistas. Para cada una de las entrevistas se debe indicar la información de nombres, apellidos, edad, distrito, un screenshot de un cuadro de video, incluyendo el timing donde inicia cada entrevista y el URL del video subido. Todas las entrevistas deben editarse en un solo video y subirse en el OneDrive facilitado por el docente. La entrevista debe ser registrada en video, que sirve de evidencia de entrevistas. Para cada entrevista debe redactarse en este informe un resumen, que explique de forma descriptiva las respuestas del entrevistado a las preguntas realizadas. Todas las características objetivas y subjetivas, incluyendo aspectos como personalidad, marcas e influencias, tecnología, canales de interacción, browser, dispositivos, etc. deben estar incluidas como parte de los resúmenes para cada entrevista. Debe ser evidente que cada característica de los arquetipos que se construirán en base a esta información provienen de la información recolectada.  Ver otras indicaciones importantes en el _Anexo C. Indicaciones para secciones que incluyen Videos_ . 
-
-
-
-<u>Página 11 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+Para cada segmento se requiere de 3 a 5 entrevistas. Para cada una de las entrevistas se debe indicar la información de nombres, apellidos, edad, distrito, un screenshot de un cuadro de video, incluyendo el timing donde inicia cada entrevista y el URL del video subido. Todas las entrevistas deben editarse en un solo video y subirse en el OneDrive facilitado por el docente. La entrevista debe ser registrada en video, que sirve de evidencia de entrevistas. Para cada entrevista debe redactarse en este informe un resumen, que explique de forma descriptiva las respuestas del entrevistado a las preguntas realizadas. Todas las características objetivas y subjetivas, incluyendo aspectos como personalidad, marcas e influencias, tecnología, canales de interacción, browser, dispositivos, etc. deben estar incluidas como parte de los resúmenes para cada entrevista. Debe ser evidente que cada característica de los arquetipos que se construirán en base a esta información provienen de la información recolectada.  Ver otras indicaciones importantes en el _Anexo C. Indicaciones para secciones que incluyen Videos_ .
 
 #### **Análisis de entrevistas** 
 
@@ -529,13 +449,7 @@ En esta sección se elabora los User Journey Maps (uno por cada User Persona). L
 
 #### **Empathy Mapping** 
 
-En esta sección, el equipo resume el proceso de elaboración y presenta capturas de los Empathy Maps realizados en la herramienta indicada, para cada uno de los User 
-
-<u>Página 12 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+En esta sección, el equipo resume el proceso de elaboración y presenta capturas de los Empathy Maps realizados en la herramienta indicada, para cada uno de los User
 
 Personas. El proceso de elaboración incluye la preparación, colocar al centro el User Persona. Colocar en la sección correspondiente en la herramienta cada observación de los miembros del equipo sobre el User Persona, buscando responder las preguntas ¿Con quién estamos empatizando? ¿Qué necesita hacer? ¿Qué está diciendo? ¿Qué está viendo? ¿Qué está haciendo? ¿Qué está escuchando? ¿Cómo se siente y qué piensa? Identificar los Pains y Gains en base a las preguntas ¿Qué le preocupa? y ¿Qué puede ayudar a resolver sus problemas? ¿Qué puede convencerlo de que somos la alternativa correcta? ¿Qué dice? 
 
@@ -559,15 +473,7 @@ Requisitos definidos junto con el conjunto de User Stories y Epics para los requ
 
 
 
-> 1 En el libro Eric Evans establece “Ubiquitous Language is modeled within a Limited context, where the terms and concepts of the business domain are identified, and there should be no ambiguity”. 
-
-
-
-<u>Página 13 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+> 1 En el libro Eric Evans establece “Ubiquitous Language is modeled within a Limited context, where the terms and concepts of the business domain are identified, and there should be no ambiguity”.
 
 Es importante recordar que una User Story tiene varios criterios de aceptación. Los criterios de aceptación deben redactarse en tiempo presente, tercera persona, no hacer referencia a detalles de interfaz de usuario y deben ser comprobables. La estructura de criterios de aceptación debe seguir la estructura de Gherkin (GivenWhen-Then). Las únicas excepciones podrían ser reglas de negocio o restricciones que no dependan de condiciones. 
 
@@ -583,13 +489,7 @@ Investigar la Integración de Stripe para el Procesamiento de Pagos en la Plataf
 
 En esta sección el equipo explica y presenta capturas del Impact Mapping para el modelo de negocio digital, elaborado en la herramienta indicada. Para esto debe haber elaborado previamente en la herramienta las fichas para cada User Persona. La elaboración incluye la identificación de los _Business Goals_ (los business goals deben cumplir con los criterios SMART<sup>2</sup> . Por ejemplo “Alcanzar los 600 usuarios suscritos al plan A en el lapso de 8 meses.”). Debe considerar varios _Business Goals_ . Debe incluir como _Actors/Personas_ a los User Personas previamente identificados, según relaciones con los Business Goals, buscando responder la pregunta ¿Quiénes me ayudarán a lograr la meta? La columna _Impact_ debe incluir los enunciados de cómo desea que los User Persona cambien o se comporten ¿Qué tendría él/ella que hacer para ayudar a que se logre la meta? La columna _Deliverables_ debe incluir los elementos que respondan la pregunta ¿Qué puedo hacer como negocio digital para provocar esos _Impacts_ ?  La columna User Stories debe incluir la descripción de los User Stories (en el formato “Como... deseo... para...”) que permitirán obtener los features que ayudarán a producir los _Deliverables_ identificados. 
 
-> 2 Vea el artículo “Why are SMART Goals Necessary In Business?”, que está ubicado en la sección de Referencias. 
-
-<u>Página 14 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+> 2 Vea el artículo “Why are SMART Goals Necessary In Business?”, que está ubicado en la sección de Referencias.
 
 #### **Product Backlog** 
 
@@ -618,15 +518,7 @@ En esta sección el equipo, a partir del dominio modelado como EventStorm, expli
 
 #### **Domain Message Flows Modeling** 
 
-En esta sección, el equipo explica y evidencia el proceso seguido para visualizar cómo deben colaborar los bounded contexts para resolver los casos que se presentan en el 
-
-
-
-<u>Página 15 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+En esta sección, el equipo explica y evidencia el proceso seguido para visualizar cómo deben colaborar los bounded contexts para resolver los casos que se presentan en el
 
 negocio para los usuarios del sistema. Para ello debe aplicar la técnica de visualización _Domain Storytelling_ . Complemente la explicación con capturas en imágenes de los diagramas de Domain Storytelling elaborados. 
 
@@ -644,13 +536,7 @@ En esta sección el equipo presenta y explica la representación, aplicando C4 M
 
 #### **Software Architecture Context Level Diagrams** 
 
-En esta sección el equipo realiza una introducción, presenta en imagen el context diagram, el cual debe mostrar el sistema como un recuadro en el centro, rodeado por sus usuarios y otros sistemas con los que interactúa. Utilice la herramienta indicada para la elaboración del diagrama. Se incluye en esta sección una explicación del diagrama. 
-
-<u>Página 16 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+En esta sección el equipo realiza una introducción, presenta en imagen el context diagram, el cual debe mostrar el sistema como un recuadro en el centro, rodeado por sus usuarios y otros sistemas con los que interactúa. Utilice la herramienta indicada para la elaboración del diagrama. Se incluye en esta sección una explicación del diagrama.
 
 #### **Software Architecture Container Level Diagrams** 
 
@@ -678,15 +564,7 @@ En esta capa el equipo explica por medio de qué clases representará el core de
 
 #### **Interface Layer** 
 
-En esta sección el equipo introduce, presenta y explica las clases que forman parte de Interface/Presentation Layer, como clases del tipo _Controllers_ o _Consumers_ . 
-
-
-
-<u>Página 17 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+En esta sección el equipo introduce, presenta y explica las clases que forman parte de Interface/Presentation Layer, como clases del tipo _Controllers_ o _Consumers_ .
 
 #### **Application Layer** 
 
@@ -710,13 +588,7 @@ En esta sección el equipo presenta el Class Diagram de UML para las clases del 
 
 #### **Bounded Context Database Diagram** 
 
-En esta sección el equipo presenta y explica para cada producto donde se implementa el bounded context, el Database Diagram que incluye los objetos de base de datos que permitirán la persistencia de información para los objetos del bounded context. Para el caso de un almacenamiento en base de datos relacional, aquí debe especificarse tablas, columnas, constraints (por ejemplo, primary, foreign key) y evidenciarse las relaciones entre tablas. Utilice para la elaboración del diagrama la herramienta indicada. 
-
-<u>Página 18 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+En esta sección el equipo presenta y explica para cada producto donde se implementa el bounded context, el Database Diagram que incluye los objetos de base de datos que permitirán la persistencia de información para los objetos del bounded context. Para el caso de un almacenamiento en base de datos relacional, aquí debe especificarse tablas, columnas, constraints (por ejemplo, primary, foreign key) y evidenciarse las relaciones entre tablas. Utilice para la elaboración del diagrama la herramienta indicada.
 
 #### **Product design** 
 
@@ -740,15 +612,7 @@ En esta sección el equipo explica en qué grupos de información aplicará cuá
 
 #### **Labeling Systems** 
 
-Aquí el equipo explica de qué maneras se representarán los datos, considerando simplicidad y buscando evitar la confusión para los visitantes y usuarios. En esta 
-
-
-
-<u>Página 19 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+Aquí el equipo explica de qué maneras se representarán los datos, considerando simplicidad y buscando evitar la confusión para los visitantes y usuarios. En esta
 
 sección se especifica las etiquetas (con el mínimo número de palabras) a utilizar para representar los conjuntos de información y las asociaciones<sup>3</sup> entre las mismas. 
 
@@ -776,13 +640,7 @@ Esta sección incluye una sección interna donde se presenta y explica los Wiref
 
 Esta sección presenta y explica los Mock-ups del Landing Page, tanto en su versión para Desktop Web Browser como Mobile Web Browser. En la propuesta y la explicación debe evidenciarse la aplicación de los principios, elementos de diseño, diseño inclusivo y arquitectura de información, así como el Design System establecido para los productos digitales. 
 
-> 3 Por ejemplo, la etiqueta ‘Contacto’ en un botón en el encabezado de una página sirve para asociar en la mente del visitante que encontrará en otro lugar información de contacto como número de teléfono, email y cuentas de redes sociales, sin necesidad de que todo esté aglomerado en un mismo lugar. 
-
-<u>Página 20 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+> 3 Por ejemplo, la etiqueta ‘Contacto’ en un botón en el encabezado de una página sirve para asociar en la mente del visitante que encontrará en otro lugar información de contacto como número de teléfono, email y cuentas de redes sociales, sin necesidad de que todo esté aglomerado en un mismo lugar.
 
 #### **Mobile Applications UX/UI Design** 
 
@@ -806,15 +664,7 @@ Esta sección presenta la propuesta de User Flows. Debe considerarse un User Flo
 
 #### **Mobile Applications Prototyping** 
 
-Esta sección incluye Prototipos de UI para Desktop y Mobile Web Browser con simulación de interacción y navegación, acorde con la propuesta de paths de User Flow Diagrams. Esta sección inicia con una introducción en la que se explica los principales criterios para las decisiones de interacción. Es importante evidenciar la relación con las decisiones de arquitectura de información, en particular sobre el sistema de navegación y los tipos de interacciones seleccionadas. Para cada caso debe incluirse 1 screenshot de video y un enlace a un video subido a Microsoft Stream para 
-
-
-
-<u>Página 21 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+Esta sección incluye Prototipos de UI para Desktop y Mobile Web Browser con simulación de interacción y navegación, acorde con la propuesta de paths de User Flow Diagrams. Esta sección inicia con una introducción en la que se explica los principales criterios para las decisiones de interacción. Es importante evidenciar la relación con las decisiones de arquitectura de información, en particular sobre el sistema de navegación y los tipos de interacciones seleccionadas. Para cada caso debe incluirse 1 screenshot de video y un enlace a un video subido a Microsoft Stream para
 
 cada aplicación, en el que se demuestre y explique los principales flujos de interacción que cubren los prototipos. 
 
@@ -834,13 +684,7 @@ En esta sección el equipo especifica, describe e indica los nombres de producto
 
 En esta sección el equipo establece los medios y esquema de organización que aplicará para el seguimiento de modificaciones. Para ello utilizará GitHub como plataforma y sistema de control de versiones. Debe incluirse el URL del repositorio de GitHub para cada producto: Landing Page, Web Services, Frontend Web Applications. Tomar en cuenta que en el caso de Web Services, se incluye en el repositorio el proyecto y los archivos de pruebas, tanto unitarias como de integración/aceptación. 
 
-En esta sección debe también explicarse de qué forma implementará GitFlow (Ver artículo “A successful Git branching model” de Vincent Driessen en la sección de Referencias) como Workflow de control de versiones, es decir qué branches (ramas) creará además de main branch (rama principal), por ejemplo, develop branch. Para 
-
-<u>Página 22 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+En esta sección debe también explicarse de qué forma implementará GitFlow (Ver artículo “A successful Git branching model” de Vincent Driessen en la sección de Referencias) como Workflow de control de versiones, es decir qué branches (ramas) creará además de main branch (rama principal), por ejemplo, develop branch. Para
 
 GitFlow cada Feature requiere su propio branch, por ello debe especificar qué convenciones se aplicará para nombrar los feature branches. Igualmente debe incluir las convenciones para Release branches y Hotfix branches. Aplique semantic versioning para nom brar sus Releases (Vea “Semantic Versioning 2.0.0” en la sección de Referencias). 
 
@@ -872,16 +716,6 @@ En esta sección se especifica los aspectos principales del Sprint Planning Meet
 |Date|YYYY-MM-DD|
 |Time|HH:MM AM/PM|
 
-
-
-
-
-<u>Página 23 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
-
 |Location|(Descripción de la ubicación de la reunión,física o virtual)|
 |---|---|
 |Prepared By|Jiménez Rosas, Arturo Eduardo|
@@ -907,13 +741,7 @@ _Our focus is on_ <Outcome> _We believe it delivers_ <Impact> to <Customer(s)> _
 
 Por ejemplo, tomando como ejemplo un solo feature: “ **Our focus** is on sending a basic email that contains a link to a spreadsheet. **We believe it delivers** confidence in the product to our organization. **This will be confirmed when** we have an email in an inbox”. 
 
-Es importante que el equipo se enfoque en identificar _Outcome_ , _Impact_ , _Customer_ ( _s_ ), así como _Event_ . El solo hecho de aplicar el template no garantiza un buen Sprint Goal. El siguiente ejemplo es un uso **incorrecto** del template: “ **Our focus is on** having SAP 
-
-<u>Página 24 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+Es importante que el equipo se enfoque en identificar _Outcome_ , _Impact_ , _Customer_ ( _s_ ), así como _Event_ . El solo hecho de aplicar el template no garantiza un buen Sprint Goal. El siguiente ejemplo es un uso **incorrecto** del template: “ **Our focus is on** having SAP
 
 integrated into the Corporate system. **We believe it delivers** satisfaction and closure for our project manager. **This will be confirmed when** Epic SAP- 123 is closed in Jira.” Aquí el Goal se está centrando en complacer a alguien del equipo. Una mejor aproximación a un Sprint Goal sería: “ **Our focus is on** having SAP integrated into the Corporate system. **We believe it delivers** improved features functionality and increasing productivity to Department X. **This will be confirmed when** the colleagues in Department X ar e using the improved features and can see the benefits.” 
 
@@ -949,13 +777,7 @@ The ACME Learning Center Product Team decided to include plan information in the
 
 Sprint Goal 
 
-_“_ **_Our focus is on_** _offering more detailed information to new visitors, providing an enhanced enrollment process to students, and incrementing new feature possibilities to the development team members._ 
-
-
-
-<u>Página 25 de 48</u> _<u>V3.0</u>_ 
-
-messages.downloaded_by 
+_“_ **_Our focus is on_** _offering more detailed information to new visitors, providing an enhanced enrollment process to students, and incrementing new feature possibilities to the development team members._
 
 **_We believe it delivers_** _an easier plan selection to visitors, more flexibility on enrollment to students, and opportunities for implementing more enrollment-related features in the Learning Center ecosystem to development team_ **_This will be confirmed when_** _visitors can subscribe directly with and specific plan in no more than three steps, students can cancel previously requested enrollments without intervention of support staff, and developers implement new features related to enrollments using the implemented endpoints without intervention of backend development team.”_ 
 
@@ -984,13 +806,7 @@ En esta sección se explica y presenta los avances en implementación con relaci
 
 #### **Testing Suite Evidence for Sprint Review** 
 
-En esta sección se explica y presenta el conjunto de Unit Tests, Integration Tests y Acceptance Tests automatizados, para Web Services relacionados con los User Stories 
-
-<u>Página 26 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+En esta sección se explica y presenta el conjunto de Unit Tests, Integration Tests y Acceptance Tests automatizados, para Web Services relacionados con los User Stories
 
 especificados en el Sprint. En el caso de los tests de BDD debe elaborarse los archivos .feature utilizando el lenguaje Gherkin y los archivos Steps en el lenguaje de programación. En esta sección se debe incluir la relación de tests diseñados. En el caso de los Unit Tests, debe indicarse con qué clases y comportamientos se relacionan. En el caso de los Integration Tests ó Acceptance Tests bajo el enfoque BDD, se incluye el código de los .feature Files, explicando con qué User Stories se relacionan. También debe incluirse la ruta del repositorio de control de versiones para los proyectos de Testing, junto con los id de commits relacionados con los avances en Testing para este Sprint. Debe elaborarse una tabla que incluya para cada repositorio los commits relacionados con testing. La estructura requerida se presenta a continuación. 
 
@@ -1010,15 +826,7 @@ En esta sección se incluye la relación de Endpoints documentados con OpenAPI, 
 
 #### **Software Deployment Evidence for Sprint Review** 
 
-En esta sección se resume los procesos realizados en relación con Deployment durante este Sprint. La sección inicia con una introducción explicando qué se ha realizado con respecto a despliegue durante este Sprint. Abarca actividades de creación de cuentas, configuración de recursos en cloud providers, configuración de proyectos de desarrollo para integración o automatización de labor de Deployment, entre otros. Se considera dentro del proceso de Deployment todos los productos digitales: Landing 
-
-
-
-<u>Página 27 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+En esta sección se resume los procesos realizados en relación con Deployment durante este Sprint. La sección inicia con una introducción explicando qué se ha realizado con respecto a despliegue durante este Sprint. Abarca actividades de creación de cuentas, configuración de recursos en cloud providers, configuración de proyectos de desarrollo para integración o automatización de labor de Deployment, entre otros. Se considera dentro del proceso de Deployment todos los productos digitales: Landing
 
 Page, Web Services y Aplicaciones. Se debe adicionar capturas en imagen y explicaciones de los pasos realizados durante el Sprint. 
 
@@ -1044,13 +852,7 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 
 #### **Conclusiones y recomendaciones** 
 
-En esta sección el equipo enuncia las conclusiones sobre el trabajo, incluyendo los resultados a los que ha llegado en relación a los Problem Statements especificados, los assumptions realizados frente al comportamiento real de los segmentos, los 
-
-<u>Página 28 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+En esta sección el equipo enuncia las conclusiones sobre el trabajo, incluyendo los resultados a los que ha llegado en relación a los Problem Statements especificados, los assumptions realizados frente al comportamiento real de los segmentos, los
 
 Hypotheses Statements establecidos y los criterios de éxito especificados en el proceso de Lean UX, en contraste con los resultados obtenidos de las validaciones. Igualmente incluye recomendaciones sobre los siguientes pasos en relación a Roadmap de los productos digitales que forman parte del alcance del modelo de negocio digital. 
 
@@ -1070,15 +872,7 @@ Este video resume el proceso de trabajo realizado, incluyendo escenas con imáge
 
 #### **Glosario** 
 
-En esta sección se definen los términos clave utilizados en el documento, proporcionando una comprensión clara de los conceptos técnicos y metodológicos. El glosario es esencial para asegurar que los lectores, ya sean técnicos o no, tengan acceso a las definiciones precisas de los términos que se emplean a lo largo del trabajo. Este espacio no solo sirve como referencia, sino que también facilita la comunicación 
-
-
-
-<u>Página 29 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+En esta sección se definen los términos clave utilizados en el documento, proporcionando una comprensión clara de los conceptos técnicos y metodológicos. El glosario es esencial para asegurar que los lectores, ya sean técnicos o no, tengan acceso a las definiciones precisas de los términos que se emplean a lo largo del trabajo. Este espacio no solo sirve como referencia, sino que también facilita la comunicación
 
 y evita malentendidos, especialmente en documentos que abarcan temas complejos como la arquitectura de software, diseño de sistemas y metodologías de desarrollo. Se incluirán definiciones de términos utilizados en la creación de diagramas de arquitectura de software, diseño de interfaces de usuario (UI/UX), patrones de diseño y otros conceptos relevantes para el contexto del proyecto. Además, se agregarán explicaciones de abreviaturas y acrónimos que podrían no ser familiares para todos los stakeholders. 
 
@@ -1104,13 +898,7 @@ Se debe redactar los términos y condiciones de servicio, los cuales deben estar
 
 #### **<u>Internacionalización & Accessibilidad</u>** 
 
-Debe evidenciarse que el ciclo de vida de la solución y los productos elaborados están dirigidos por un enfoque inclusivo. En el caso de los productos, éstos deben incluir 
-
-<u>Página 30 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+Debe evidenciarse que el ciclo de vida de la solución y los productos elaborados están dirigidos por un enfoque inclusivo. En el caso de los productos, éstos deben incluir
 
 características de _Internationalization_ bajo i18n (En el caso del Landing Page, mobile App y Web Services) y _Accessibility_ bajo a11y (en el caso del Landing Page y mobile App). Considere como base los idiomas English (en_US), Latin American Spanish (es_419). Incluya en las experiencias web la configuración de ARIA attributes. Tome consideraciones adecuadas para internationalization y accessibility en los demás productos digitales de la solución. El idioma por defecto para los mensajes, interfaz de usuario e interfaz de documentación en todos los productos de la solución (Landing Page, Web Services, Aplicaciones) debe ser en **inglés** . 
 
@@ -1136,15 +924,7 @@ características de _Internationalization_ bajo i18n (En el caso del Landing Pag
 
 - Para el control de proyectos, se utilizará Pivotal Tracker / JetBrains YouTrack / Jira Software / Trello. 
 
-- Para el almacenamiento y control de versiones de código se utilizará GIT gestionado desde GitHub aplicando GitFlow Workflow, Conventional Commits y Semantic Versioning. 
-
-
-
-<u>Página 31 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+- Para el almacenamiento y control de versiones de código se utilizará GIT gestionado desde GitHub aplicando GitFlow Workflow, Conventional Commits y Semantic Versioning.
 
 # **<u>Evaluación del Trabajo Final</u>** 
 
@@ -1164,13 +944,7 @@ Debe incluir versión actualizada de Registro de Versiones del Informe, Project 
 
 Debe incluir versión corregida y mejorada de artefactos previamente presentados. Debe estar desplegado el Landing Page. 
 
-Debe estar desplegado al 100% el backend en un sitio público con su documentación. Deben mostrarse las principales funcionalidades core de la aplicación. Elabora la primera versión del video con la validación de la aplicación. Elabora la primera versión del video About-the-Product. Elabora la primera versión del video About-the-Team. 
-
-<u>Página 32 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+Debe estar desplegado al 100% el backend en un sitio público con su documentación. Deben mostrarse las principales funcionalidades core de la aplicación. Elabora la primera versión del video con la validación de la aplicación. Elabora la primera versión del video About-the-Product. Elabora la primera versión del video About-the-Team.
 
 Debe incluir en el informe: Capítulo IV: Product Implementation & Validation Nota: En esta entrega se debe presentar el Sprint 2 Conclusiones Bibliografía Anexos. 
 
@@ -1186,15 +960,7 @@ La aplicación debe estar desplegada en Firebase App Distribution u otro servici
 
 Debe incluir en el informe: Capítulo IV: Product Implementation & Validation Nota: En esta entrega se debe presentar el Sprint 3 
 
-Se incluye además la versión final de: Conclusiones Bibliografía Anexos. 
-
-
-
-<u>Página 33 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+Se incluye además la versión final de: Conclusiones Bibliografía Anexos.
 
 ### **Referencias** 
 
@@ -1242,13 +1008,7 @@ messages.downloaded_by
 
 - Otiscole Customer Portfolio – What’s Cookin’ <u>http://otiscole.com</u> 
 
-- A step-by-step guide to scenario mapping <u>http://www.uxforthemasses.com/scenario-mapping/</u> 
-
-<u>Página 34 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+- A step-by-step guide to scenario mapping <u>http://www.uxforthemasses.com/scenario-mapping/</u>
 
 - What are User Flows in User Experience (UX) Design? <u>https://careerfoundry.com/en/blog/ux-design/what-are-user-flows/</u> 
 
@@ -1288,15 +1048,7 @@ messages.downloaded_by
 
 - Domain-Driven Architecture Diagrams <u>https://medium.com/nick-tune-tech-strategy-blog/domain-drivenarchitecture-diagrams-139a75acb578</u> 
 
-- Domain Storytelling and Requirements <u>https://domainstorytelling.org/#dst-requirements</u> 
-
-
-
-<u>Página 35 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+- Domain Storytelling and Requirements <u>https://domainstorytelling.org/#dst-requirements</u>
 
 - Domain Driven Design: Tackling Complexity in the Heart of Software <u>https://openpracticelibrary.com/perspective/domain-driven-design/</u> 
 
@@ -1326,23 +1078,9 @@ messages.downloaded_by
 
 - Create your Kotlin Multiplatform app 
 
-- <u>https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatformcreate-first-app.html</u> 
+- <u>https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatformcreate-first-app.html</u>
 
-<u>Página 36 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
-
-## **Anexos** 
-
-
-
-<u>Página 37 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+## **Anexos**
 
 #### **Anexo A. Estructura recomendada para la sección Student Outcome** 
 
@@ -1369,14 +1107,6 @@ por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET
 |Reconoce la necesidad del<br>aprendizaje<br>permanente|||
 |para<br>el<br>desempeño<br>profesional y el desarrollo de<br>proyectos en soluciones de<br>software.|||
 
-
-
-<u>Página 38 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
-
 #### **Anexo B. Estructura para el Informe de participación** 
 
 El Final Project Individual Member Performance Report es un documento en word donde el Team Leader del equipo resume la participación de cada integrante y la asigna a cada uno, una calificación entre 0 y 20. 
@@ -1398,16 +1128,6 @@ Adjuntar el archivo en todas las entregas programadas junto al final Project.
 |||…<br>Praesent mattis arcu<br>ut nunc tempus<br>facilisis.|…<br>X|||||
 |…<br>n|Barrera<br>Robles, Luis<br>Miguel|No participó||||X|0|
 
-
-
-
-
-<u>Página 39 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
-
 #### **Anexo C. Indicaciones para secciones que incluyen videos** 
 
 ###### **Indicaciones generales:** 
@@ -1423,14 +1143,6 @@ messages.downloaded_by
 |Validation<br>Interviews|Cantidad de Videos: 1<br>Nomenclatura:<br>upc-pre-202501-cc238-<sección>-<startup>-<br>validation-sprint-<n><br>Formato: .mp4<br>Duración: En función a cantidad de entrevistas<br>(considerar edición de 3 a 5 minutos por<br>entrevista).|Consolida sesiones y entrevistas<br>de validación en las que usuarios<br>de los segmentos objetivo<br>interactúen con el landing page y<br>con la aplicación móvil,<br>manifestando sus observaciones.<br>Para cada entrevista se debe<br>incluir títulos con información<br>del entrevistado, el segmento<br>objetivo y la fecha de la<br>entrevista.|Subir el video en el OneDrive indicado por el<br>docente.<br>Incluir en el informe screenshot del video con<br>enlace al mismo.<br>Incluir redacción de introducción a la sección<br>y redacción de registro de cada entrevista,<br>junto con la evaluación de heurísticas de<br>usabilidad, arquitectura de información y<br>diseño inclusivo para la sesión de evaluación.<br>Seguir especificaciones del enunciado y<br>formatos indicados.|
 |About the<br>Product|Cantidad de videos: 1<br>Nomenclatura:<br>upc-pre-202501-cc238-<sección>-<startup>-<br>about-the-product-sprint-<n><br>Formato: .mp4<br>Duración: De 1 a 2 minutos.|Orientación promocional,<br>resumiendo el modelo de<br>negocio, las características y<br>beneficios del producto,<br>incluyendo algunas escenas de<br>interacción con el producto y al<br>menos una opinión por cada<br>segmento objetivo.|Subir el video en el OneDrive indicado por el<br>docente**y**en YouTube.<br>Incluir en el informe screenshot del video con<br>enlace al mismo.<br>Incluir redacción de introducción a la sección.<br>Adicionalmente, incrustar el video en una<br>sección adecuada del Landing Page. Seguir<br>especificaciones del enunciado.|
 |About the<br>Team|Cantidad de videos: 1<br>Nomenclatura:<br>upc-pre-202501-cc238-<sección>-<startup>-<br>about-the-team-sprint-<n><br>Formato: .mp4<br>Duración: En función al contenido (considerar 5<br>minutos para la sección de retrospectiva del<br>grupo y 1 minuto por cada testimonio de<br>miembro del equipo).|Video que resume el proceso de<br>trabajo realizado, incluyendo<br>escenas de sesiones de trabajo<br>real del equipo,<br>complementando con narración<br>(voz en off) del proceso. Incluye<br>además el testimonio ante<br>cámara de cada participante<br>describiendo actividades<br>realizadas, logro del student<br>outcome y desarrollo de<br>competencias alcanzados.|Subir el video en el OneDrive indicado por el<br>docente.**y**en YouTube.<br>Incluir redacción de introducción a la sección,<br>resumiendo el proceso de trabajo y los logros<br>alcanzados por los miembros del requipo.<br>Adicionalmente, incrustar el video en una<br>sección adecuada del Landing Page. Seguir<br>especificaciones del enunciado.|
-
-
-
-<u>Página 40 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
 
 #### **Anexo D. Ejemplo de Spike Story** 
 
@@ -1454,15 +1166,7 @@ La Plataforma ACME Learning Center consta de una aplicación web construida con 
 
 - Dado que el equipo necesita entender las capacidades de Stripe para el procesamiento de pagos en web y móvil, 
 
-Cuando el desarrollador revisa la documentación de la API de Stripe (e.g., Payments, Checkout, Mobile SDKs, Stripe.js), 
-
-
-
-<u>Página 41 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+Cuando el desarrollador revisa la documentación de la API de Stripe (e.g., Payments, Checkout, Mobile SDKs, Stripe.js),
 
 Entonces el desarrollador identifica y documenta el producto o flujo de Stripe más adecuado (e.g., Stripe Checkout para pagos alojados o Payment Intents para flujos personalizados en web/móvil) para la plataforma ACME en un informe compartido. 
 
@@ -1496,13 +1200,7 @@ Entonces el desarrollador incluye un resumen de riesgos y las características d
 
 - Dado los requisitos de rendimiento de la plataforma para web, móvil y backend, Cuando el desarrollador evalúa el impacto de la integración de Stripe en web (e.g., capacidad de respuesta de la aplicación Angular 20 con zoneless change detection), móvil (e.g., rendimiento del flujo de pagos en la aplicación KMM), y backend (e.g., latencia de APIs en endpoints de Spring Boot 3.5.5), 
 
-Entonces el desarrollador documenta los hallazgos, incluyendo cualquier posible cuello de botella, en el informe. 
-
-<u>Página 42 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+Entonces el desarrollador documenta los hallazgos, incluyendo cualquier posible cuello de botella, en el informe.
 
 7. Verifica los Requisitos de Cumplimiento 
 
@@ -1542,25 +1240,11 @@ Cuando el desarrollador compila todos los hallazgos en un informe compartido, En
 
 - El código del PoC está registrado en una rama del repositorio. 
 
-- El informe se comparte y revisa en una reunión de equipo o sesión de refinamiento del backlog. 
-
-
-
-<u>Página 43 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+- El informe se comparte y revisa en una reunión de equipo o sesión de refinamiento del backlog.
 
 - Los hallazgos se utilizan para crear o refinar historias de implementación en el backlog. 
 
-- El Spike está limitado a 8-16 horas y se completa dentro del sprint. 
-
-<u>Página 44 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+- El Spike está limitado a 8-16 horas y se completa dentro del sprint.
 
 #### **Anexo E. Formato para Evaluación de User Experience según Heurísticas** 
 
@@ -1606,15 +1290,7 @@ No están incluidas en esta versión de la evaluación las siguientes tareas:
 
 **_4._** Guardar “alerta de paquetes” 
 
-**_5._** Etc. 
-
-
-
-<u>Página 45 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+**_5._** Etc.
 
 ###### ESCALA DE SEVERIDAD: 
 
@@ -1655,13 +1331,7 @@ _(Incluir además una captura de pantalla ilustrando el problema)._
 
 _Recomendación:_ 
 
-_La más práctica es que al momento en que queramos realizar dicho trámite, el navegador lo abra en una ventana aparte para no perder los cambios realizados en nuestro carrito de compras._ 
-
-<u>Página 46 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+_La más práctica es que al momento en que queramos realizar dicho trámite, el navegador lo abra en una ventana aparte para no perder los cambios realizados en nuestro carrito de compras._
 
 #### **Anexo F. Errores típicos en la traducción y uso de términos para Ingeniería de Software** 
 
@@ -1687,15 +1357,7 @@ La tabla a continuación resume los errores más comunes en la traducción de t�
 
 > 7 Vea la traducción de _application_ en https://www.collinsdictionary.com/dictionary/english-spanish/application. 
 
-> 8 Vea la traducción de _elicit_ en https://www.collinsdictionary.com/dictionary/english-spanish/elicit. 
-
-
-
-<u>Página 47 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+> 8 Vea la traducción de _elicit_ en https://www.collinsdictionary.com/dictionary/english-spanish/elicit.
 
 También se considera un error el uso de forma oral o escrita de traducciones incorrectas resultado de la mutación de términos originales en inglés, de uso típico en ingeniería de software. Términos como _deploy_ (desplegar), _deployment_ (despliegue), _test_ (probar/prueba, según el contexto de uso), _testing_ (pruebas) por ejemplo, son de uso típico en ingeniería de software. 
 
@@ -1707,11 +1369,5 @@ Igualmente se considera un error de comunicación, el uso del término _metodolo
 
 > 9 Ver definición de _apartado_ en https://dle.rae.es/apartado. 
 
-> 10 Ver definición de _metodología_ en https://dle.rae.es/metodología 
-
-<u>Página 48 de 48</u> 
-
-_<u>V3.0</u>_ 
-
-messages.downloaded_by 
+> 10 Ver definición de _metodología_ en https://dle.rae.es/metodología
 
