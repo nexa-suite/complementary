@@ -12,3 +12,25 @@ __pycache__/
 
 # Local runtime logs
 *.log
+
+# Generated/local construction state; reusable source remains trackable
+construction-environment/environment-report.md
+construction-environment/environment-report.md.tmp
+construction-environment/gpt/knowledge-upload/
+construction-environment/gpt/support/knowledge-manifest.md
+construction-environment/gpt/support/knowledge-sha256.txt
+construction-environment/gpt/.local/
+construction-environment/toolchains/
+construction-environment/**/generated/
+construction-environment/**/output/
+construction-environment/**/.local/
+structurizr/.local/
+structurizr/logs/
+structurizr/volumes/
+
+# Local credentials and host runtime state
+.env.local
+*.local
+.local-keys/
+tools/runtime/*.env
+tools/runtime/*.log

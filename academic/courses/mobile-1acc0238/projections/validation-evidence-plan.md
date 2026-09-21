@@ -1,10 +1,14 @@
 ---
-status: planned
+status: SUPERSEDED
 maturity: BASELINED
 scope: runway
 owner: delivery
 last-reviewed: 2026-08-30
 ---
+
+> HISTORICAL PROJECTION — DO NOT USE AS CURRENT NEXA CANON.
+>
+> CURRENT AUTHORITY -> `nexa-suite/blueprint/90-academic/mobile/course-1acc0238/`.
 
 # Mobile validation and acceptance evidence plan
 

@@ -1,0 +1,27 @@
+name: nexa-blueprint-architecture
+
+services:
+  structurizr-seed:
+    image: alpine:3.22
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - >-
+        rm -rf /target/* /target/.[!.]* /target/..?* 2>/dev/null || true;
+        cp -R /source/. /target/
+    volumes:
+      - ${NEXA_BLUEPRINT_DIR:-../../blueprint}/01-shared/architecture/c4/structurizr:/source:ro
+      - structurizr-data:/target
+
+  structurizr:
+    image: structurizr/structurizr:2026.06.28
+    command: local
+    ports:
+      - "9090:8080"
+    depends_on:
+      structurizr-seed:
+        condition: service_completed_successfully
+    volumes:
+      - structurizr-data:/usr/local/structurizr
+
+volumes:
+  structurizr-data:
