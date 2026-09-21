@@ -12,3 +12,16 @@ __pycache__/
 
 # Local runtime logs
 *.log
+
+# Local-only construction and rendering environments
+construction-environment/
+structurizr/
+construction-environment/gpt/knowledge-upload/
+construction-environment/gpt/support/knowledge-sha256.txt
+
+# Local credentials and host runtime state
+.env.local
+*.local
+.local-keys/
+tools/runtime/*.env
+tools/runtime/*.log
