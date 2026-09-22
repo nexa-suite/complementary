@@ -1,4 +1,16 @@
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/nexa-suite/api/main/docs/assets/nexa.svg" alt="Nexa" width="220" />
+
 # Nexa Complementary
+
+**Supporting research, references and reproducible engineering utilities.**
+
+![Supporting material](https://img.shields.io/badge/role-supporting%20material-64748B?style=flat-square) ![Authority](https://img.shields.io/badge/Product%20and%20Architecture-non--authoritative-64748B?style=flat-square) ![Latest Git tag](https://img.shields.io/github/v/tag/nexa-suite/complementary?sort=semver&style=flat-square&label=latest%20Git%20tag)
+
+[Academic sources](./academic/README.md) · [Reference library](./library/README.md) · [Skills](./skills/README.md) · [Tools](./tools/)
+
+</div>
 
 Supporting research, references, and reproducible utilities for the Nexa product ecosystem. Complementary does not define Product, Domain, Architecture, runtime behavior, or release readiness; those boundaries are maintained by the authoritative records and implementation repositories.
 
